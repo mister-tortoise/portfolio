@@ -5,7 +5,7 @@
 This projects has 2 braches:
 
 - develop: storing react jsx source files for development
-- master: storing built static files for production
+- main: storing built static files for production
 
 ## Scripts
 

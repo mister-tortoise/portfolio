@@ -25,7 +25,8 @@ export function ThemeToggle() {
                         initial={{ scale: 0, rotate: -180 }}
                         animate={{ scale: 1, rotate: 0 }}
                         transition={{ duration: 0.3 }}>
-                        {resolvedTheme === 'dark' ? <Moon className='h-4 w-4' /> : <Sun className='h-4 w-4' />}
+                        <Moon className='hidden h-4 w-4 dark:block' />
+                        <Sun className='block h-4 w-4 dark:hidden' />
                     </motion.div>
                     <span className='sr-only'>Toggle theme</span>
                 </Button>

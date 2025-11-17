@@ -2,9 +2,8 @@
 
 ## Branches
 
-This projects has 2 braches:
+This projects has 1 braches:
 
-- develop: storing react jsx source files for development
 - main: storing built static files for production
 
 ## Scripts

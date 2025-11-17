@@ -7,7 +7,6 @@ import { Footer, Header } from '@/components';
 import { IntlProvider, ThemeProvider } from '@/providers';
 import '@/styles/globals.css';
 
-import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -78,13 +77,13 @@ export default async function RootLayout({
     return (
         <html suppressHydrationWarning lang={locale}>
             <body className={inter.className}>
-                <ThemeProvider>
-                    <IntlProvider locale={locale} messages={localeMessages}>
+                <IntlProvider locale={locale} messages={localeMessages}>
+                    <ThemeProvider>
                         <Header />
                         {children}
                         <Footer />
-                    </IntlProvider>
-                </ThemeProvider>
+                    </ThemeProvider>
+                </IntlProvider>
             </body>
         </html>
     );

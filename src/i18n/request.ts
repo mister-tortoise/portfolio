@@ -7,6 +7,7 @@ export default getRequestConfig(async () => {
 
     return {
         locale: cookieLang,
+        timeZone: 'Asia/Ho_Chi_Minh',
         messages: (await import(`../../messages/${cookieLang}.json`)).default
     };
 });

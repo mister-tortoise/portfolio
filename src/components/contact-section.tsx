@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import { Github, Gitlab, Mail, MapPin, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-export default function ContactSection() {
+export function ContactSection() {
     const t = useTranslations('contact');
 
     const a = useTranslations('about');

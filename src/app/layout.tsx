@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import { Footer, Header } from '@/components';
-import { ThemeProvider } from '@/providers';
+import { IntlProvider, ThemeProvider } from '@/providers';
 import '@/styles/globals.css';
 
 import { NextIntlClientProvider } from 'next-intl';
@@ -78,13 +78,13 @@ export default async function RootLayout({
     return (
         <html suppressHydrationWarning lang={locale}>
             <body className={inter.className}>
-                <NextIntlClientProvider locale={locale} messages={localeMessages}>
-                    <ThemeProvider>
+                <ThemeProvider>
+                    <IntlProvider locale={locale} messages={localeMessages}>
                         <Header />
                         {children}
                         <Footer />
-                    </ThemeProvider>
-                </NextIntlClientProvider>
+                    </IntlProvider>
+                </ThemeProvider>
             </body>
         </html>
     );

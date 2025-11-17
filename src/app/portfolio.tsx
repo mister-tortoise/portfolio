@@ -5,13 +5,13 @@ import React, { Suspense } from 'react';
 import {
     AboutSection,
     AnimatedGradientBackground,
+    ContactSection,
     ExperienceSection,
     HeroSection,
     ProjectSection,
     ScrollToTop,
     SkillSection
 } from '@/components';
-import ContactSection from '@/components/contact-section';
 
 export function Portfolio() {
     return (
